@@ -42,7 +42,7 @@ mobile-menu-button.dark {
   left: 0;
   overflow: scroll;
   position: fixed;
-  top: 0px;
+  top: 0;
   transform: translateX(0 - $menu-width - 11px);
   transition: 0.5s transform ease;
   width: $menu-width;
@@ -73,7 +73,8 @@ mobile-menu-button.dark {
         white-space: nowrap;
 
 
-        &:focus, &:hover {
+        &:focus,
+        &:hover {
           border-left: 8px solid $brand-teal;
           color: white;
           text-decoration: none;
@@ -91,7 +92,7 @@ mobile-menu-button.dark {
       }
 
       &.collapsed {
-        a.dropdown:after {
+        a.dropdown::after {
           content: '\f107';
           float: right;
           font-family: "code-gov";
@@ -101,7 +102,7 @@ mobile-menu-button.dark {
       }
 
       &.expanded {
-        a.dropdown:after {
+        a.dropdown::after {
           content: '\f106';
           float: right;
           font-family: "code-gov";
@@ -112,7 +113,6 @@ mobile-menu-button.dark {
     }
 
     > li {
-
       &.search {
         padding-bottom: 1rem;
         padding-top: 1rem;
@@ -143,6 +143,7 @@ mobile-menu-button.dark {
 
         > li {
           background: #485568;
+
           &:last-child {
             border-bottom: none;
           }
@@ -154,7 +155,6 @@ mobile-menu-button.dark {
       }
     }
   }
-
 }
 
 .mobile-menu-underlay {
